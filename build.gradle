@@ -1,0 +1,40 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.9'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.volkan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+//	H2 Inmemory bir veritabanıdır. Ek bir ayar yapmadan veritabano olarak kullanabilirsiniz
+//	uygulama ayağa kalkınca çalışır ve kapandığında kapanır ve tüm datalar silinir
+//	genellikle test işlemlerinde kullanılır.
+	runtimeOnly 'com.h2database:h2'
+	compileOnly 'org.projectlombok:lombok'
+//	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

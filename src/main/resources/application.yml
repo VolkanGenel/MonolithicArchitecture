@@ -1,0 +1,31 @@
+server:
+  port: 80
+# DİKKAT
+# İlk başladığınız Ana parametre sola bitişik olmalıdır.
+# Ana başlık ile alt başlığı ayırmak için bir TAB
+# boşluk kullanınız ve çok dikkatli olun. Ayrıca
+# gireceğiniz değer :(iki nokta üst üste) den sonra
+# boşluk bırakılarak yazılmalıdır. Yoksa hataya neden
+# olur ve fark edemezsiniz.
+
+#spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    username: postgres
+#    password: root
+#    url: jdbc:postgresql://localhost:5432/Java6MonoDB
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+# application.yml değil de application.properties dosyası olsaydı
+# Buşekilde olacaktı
+#  server.port=9090
+#  spring.datasource.driver-class-name=org.postgresql.Driver
+#  spring.datasource.username=postgres
+#  spring.datasource.password=root
+#  spring.datasource.url=jdbc:postgresql://localhost:5432/Java6MonoDB
